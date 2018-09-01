@@ -2,6 +2,7 @@
 #include <math.h>
 #include <GL/glut.h>
 #define GL_PI 3.1416f
+#define e_uler 2.71f
 
 void init(void);
 void display(void);
@@ -56,7 +57,7 @@ void f_polar(void)
         //radio=2.0+4.0*sin(ang); = 2 + 4 sen θ
      //   int n = -5;
     //    while(n < 6){
-            radio=sin(ang)+pow(sin(2.5*ang),3);//n*cos(ang) + cos(5*ang); //sin(ang)+pow(sin(2.5*ang),3);//3-3*sin(ang);//2+4*sin(ang);
+            radio=pow(e_uler,cos(ang))-2*cos(4*ang);//n*cos(ang) + cos(5*ang); //sin(ang)+pow(sin(2.5*ang),3);//3-3*sin(ang);//2+4*sin(ang);
             x = radio * cos(ang);
             y = radio * sin(ang);
             glVertex2f(x,y);
