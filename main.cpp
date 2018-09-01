@@ -54,14 +54,14 @@ void f_polar(void)
     for (ang = 0.0f; ang < tope; ang += tope/delta)
     {
         //radio=2.0+4.0*sin(ang); = 2 + 4 sen θ
-        int n = -5;
-        while(n < 6){
-            radio=n*cos(ang) + cos(5*ang); //sin(ang)+pow(sin(2.5*ang),3);//3-3*sin(ang);//2+4*sin(ang);
+     //   int n = -5;
+    //    while(n < 6){
+            radio=2+4*sin(ang);//n*cos(ang) + cos(5*ang); //sin(ang)+pow(sin(2.5*ang),3);//3-3*sin(ang);//2+4*sin(ang);
             x = radio * cos(ang);
             y = radio * sin(ang);
             glVertex2f(x,y);
-            n++;
-        }
+      //      n++;
+      //  }
     }
     glEnd();
 }
